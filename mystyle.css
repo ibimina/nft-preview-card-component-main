@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+}
+
+main {
+    max-width: 289px;
+    height: auto;
+    text-align: center;
+    background-color: hsl(216, 50%, 16%);
+    padding: 22px;
+    border-radius: 3%;
+    margin: 50px auto;
+}
+
+.imgcontainer {
+    display: block;
+    padding: 5px;
+    border-radius: 3%;
+}
+
+.imgcontainer img {
+    display: block;
+    width: 100%;
+    border-radius: 3%;
+}
+
+.imgcontainer a {
+    display: block;
+    position: relative;
+    border-radius: 3%;
+}
+
+.imgcontainer a::before {
+    content: '';
+    background-image: url(images/icon-view.svg);
+    width: 46px;
+    height: 46px;
+    opacity: 0;
+    position: absolute;
+    left: 42%;
+    margin: 0 auto;
+    top: 39%;
+}
+
+.imgcontainer a::after {
+    content: '';
+    background-color: hsl(178, 100%, 50%);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+}
+
+.imgcontainer a:hover::after,
+.imgcontainer a:hover::before {
+    opacity: 0.5;
+}
+
+h3 {
+    color: hsl(0, 0%, 100%);
+    text-align: start;
+    padding: 5px;
+    margin: 5px;
+    font-weight: 600;
+}
+
+h3:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+p {
+    color: hsl(215, 51%, 70%);
+    text-align: start;
+    padding: 5px;
+    margin: 5px;
+    font-weight: 400;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+div.icon-ethereum {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+span {
+    padding: 5px;
+    margin: 5px auto;
+}
+
+p.amount1 {
+    color: hsl(178, 100%, 50%);
+}
+
+p.amount,
+p.amount1 {
+    display: inline-block;
+    margin: 0;
+    padding: 3px;
+    margin: 5px auto;
+}
+
+div.aside {
+    justify-content: flex-start;
+}
+
+div.line {
+    border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+img.avatar {
+    width: 45px;
+    height: 100%;
+    border-radius: 70%;
+    border: 1px solid hsl(0, 0%, 100%);
+}
+
+.avatarname {
+    margin: 10px 5px;
+}
+
+.name {
+    color: hsl(0, 0%, 100%);
+    font-size: 17px;
+}
+
+.name:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    margin: 1px auto;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width:900px) {
+
+    main {
+        max-width: 250px;
+        padding: 15px;
+    }
+
+    img.avatar {
+        max-width: 35px;
+    }
+
+    .avatarname {
+        margin: 5px 5px;
+        font-size: 12px;
+    }
+
+    .name {
+        font-size: 12px;
+    }
+}
